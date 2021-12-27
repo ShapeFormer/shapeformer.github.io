@@ -1,13 +1,14 @@
-# Nerfies
+# ShapeFormer
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [ShapeFormer website](https://shapeformer.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find ShapeFormer useful for your work please cite:
+
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
+@article{yan2021shapeformer,
+  author    = {Yan, Xingguang and Lin, Liqiang and Mitra, Niloy and Lischinski, Dani and Cohen-Or, Danny and Huang, Hui},
+  title     = {Shapeformer: Transformer-based Shape Completion via Sparse Representation},
+  journal   = {ArXiv},
   year      = {2021},
 }
 ```
