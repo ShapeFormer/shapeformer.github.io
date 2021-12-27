@@ -16,7 +16,9 @@ body {
 .dnerf {
   font-variant: small-caps;
 }
-
+.scaps {
+  font-variant: small-caps;
+}
 
 .teaser .hero-body {
   padding-top: 0;
