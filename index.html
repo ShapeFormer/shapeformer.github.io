@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="ShapeFormer: Transformer-based Shape Completion via Sparse Representation">
+  <meta name="description" content="ShapeFormer: Transformer-based Shape Completion via Sparse Representation">
   <meta name="keywords" content="Transformer, Completion, Reconstruction, implicit field">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ShapeFormer: Transformer-based Shape Completion via Sparse Representation</title>
@@ -25,15 +25,13 @@
 
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -42,97 +40,98 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://keunhong.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://vcc.tech/research/2019/RPMNet">
-            Motion prediction (RPM-Net), SIGGRAPH Asia 2019
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
-          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://vcc.tech/research/2019/RPMNet">
+              Motion prediction (RPM-Net), SIGGRAPH Asia 2019
+            </a>
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
-
-  </div>
-</nav>
+  </nav>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h2 class="title is-2 publication-title">ShapeFormer: Transformer-based Shape Completion via Sparse Representation</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="http://yanxg.art">Xingguang Yan</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://vcc.tech/people-4">Liqiang Lin</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy Mitra</a><sup>2,3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.cs.huji.ac.il/~danix/">Dani Lischinski</a><sup>4</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://danielcohenor.com/">Danny Cohen-Or</a><sup>5</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://vcc.tech/~huihuang">Hui Huang</a><sup>1†</sup>,
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Shenzhen University,</span>
-            <span class="author-block"><sup>2</sup>University College London</span>
-            <span class="author-block"><sup>3</sup>Adobe Research</span>
-            <span class="author-block"><sup>4</sup>Hebrew University of Jerusalem</span>
-            <span class="author-block"><sup>5</sup>Tel Aviv University</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="./static/ShapeFormer.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+            <h2 class="title is-2 publication-title">ShapeFormer: Transformer-based Shape Completion via Sparse
+              Representation</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="http://yanxg.art">Xingguang Yan</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://vcc.tech/people-4">Liqiang Lin</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy Mitra</a><sup>2,3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.cs.huji.ac.il/~danix/">Dani Lischinski</a><sup>4</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://danielcohenor.com/">Danniel Cohen-Or</a><sup>5</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://vcc.tech/~huihuang">Hui Huang</a><sup>1†</sup>,
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Shenzhen University,</span>
+                <span class="author-block"><sup>2</sup>University College London</span>
+                <span class="author-block"><sup>3</sup>Adobe Research</span>
+                <span class="author-block"><sup>4</sup>Hebrew University of Jerusalem</span>
+                <span class="author-block"><sup>5</sup>Tel Aviv University</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="./static/ShapeFormer.pdf" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
                   </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2201.10326"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2201.10326"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
+                  <!-- Video Link. -->
+                  <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -141,18 +140,18 @@
                   <span>Video</span>
                 </a>
               </span> -->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/qheldiv/shapeformer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a href="https://github.com/qheldiv/shapeformer"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Github</span>
+                    </a>
                   </span>
-                  <span>Github</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
+                  <!-- Dataset Link. -->
+                  <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -160,52 +159,52 @@
                   </span>
                   <span>Data</span>
                   </a> -->
-            </div>
+                </div>
 
+              </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/teaser.jpg"
-            class="interpolation-image"
-            alt="Interpolation end reference image."/>
-      <!-- <p class="is-bold">End Frame</p> -->
-      <!-- <video id="teaser" autoplay muted loop height="100%">
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="./static/images/teaser.jpg" class="interpolation-image" alt="Interpolation end reference image." />
+        <!-- <p class="is-bold">End Frame</p> -->
+        <!-- <video id="teaser" autoplay muted loop height="100%">
         <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
                 type="video/mp4">
       </video> -->
-      <h2 class="subtitle has-text-centered">
-        <i>ShapeFormer</i> predicts multiple completions for a real-world scan of a sports car (left column), a chair with missing parts (middle column), and a partial point cloud of human lower legs (right column).
-      </h2>
+        <h2 class="subtitle has-text-centered">
+          <i>ShapeFormer</i> predicts multiple completions for a real-world scan of a sports car (left column), a chair
+          with missing parts (middle column), and a partial point cloud of human lower legs (right column).
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop height="100%">
-        <source src="static/videos/vid_teaser_crop.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle">
-        To facilitate generative modeling, we first compress the input partial point cloud to our proposed sequence representation <i>VQDIF</i> (the sparse voxels in blue shades).
-        Conditioned on the partial sequence, <i>ShapeFormer</i> predicts a distribution of the possible completed shapes, and their VQDIFs can be sequentially sampled from this distribution.
-        By decoding these complete VQDIF sequences, multiple completed shapes can be extracted.
-      </h2>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop height="100%">
+          <source src="static/videos/vid_teaser_crop.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle">
+          To facilitate generative modeling, we first compress the input partial point cloud to our proposed sequence
+          representation <i>VQDIF</i> (the sparse voxels in blue shades).
+          Conditioned on the partial sequence, <i>ShapeFormer</i> predicts a distribution of the possible completed
+          shapes, and their VQDIFs can be sequentially sampled from this distribution.
+          By decoding these complete VQDIF sequences, multiple completed shapes can be extracted.
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
-<!-- 
+  <!-- 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -264,30 +263,36 @@
 </section> -->
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present <i>ShapeFormer</i>, a transformer-based network that produces a distribution of object completions, conditioned on incomplete, and possibly noisy, point clouds.
-            The resultant distribution can then be sampled to generate likely completions, each of which exhibits plausible shape details, while being faithful to the input.
-          </p>
-          <p>
-            To facilitate the use of transformers for 3D, we introduce a compact 3D representation, vector quantized deep implicit function (<i>VQDIF</i>), that utilizes spatial sparsity to represent a close approximation of a 3D shape by a short sequence of discrete variables.
-          </p>
-          <p>
-            Experiments demonstrate that <i>ShapeFormer</i> outperforms prior art for shape completion from ambiguous partial inputs in terms of both completion quality and diversity. We also show that our approach effectively handles a variety of shape types, incomplete patterns, and real-world scans.
-          </p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We present <i>ShapeFormer</i>, a transformer-based network that produces a distribution of object
+              completions, conditioned on incomplete, and possibly noisy, point clouds.
+              The resultant distribution can then be sampled to generate likely completions, each of which exhibits
+              plausible shape details, while being faithful to the input.
+            </p>
+            <p>
+              To facilitate the use of transformers for 3D, we introduce a compact 3D representation, vector quantized
+              deep implicit function (<i>VQDIF</i>), that utilizes spatial sparsity to represent a close approximation
+              of a 3D shape by a short sequence of discrete variables.
+            </p>
+            <p>
+              Experiments demonstrate that <i>ShapeFormer</i> outperforms prior art for shape completion from ambiguous
+              partial inputs in terms of both completion quality and diversity. We also show that our approach
+              effectively handles a variety of shape types, incomplete patterns, and real-world scans.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <!--/ Abstract. -->
+      <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -296,18 +301,18 @@
         </div>
       </div>
     </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
+      <!--/ Paper video. -->
+    </div>
+  </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
+  <section class="section">
+    <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+      <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
+        <!-- Visual Effects. -->
+        <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
@@ -320,10 +325,10 @@
           </video>
         </div>
       </div> -->
-      <!--/ Visual Effects. -->
+        <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
-      <!-- <div class="column">
+        <!-- Matting. -->
+        <!-- <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -339,121 +344,136 @@
         </div>
       </div> -->
 
-    </div>
-    <!--/ Matting. -->
-
-    <h2 class="title is-3">Completion for real scans</h2>
-    <div class="content has-text-justified">
-      <p>
-        We show how our model pre-trained on ShapeNet can be applied to scans of real objects. 
-        We test our model on partial point clouds converted from RGBD scans of the Redwood 3D Scans.
-      </p>
-    </div>
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="./static/images/results_realscan.jpg"
-              class="interpolation-image"
-              alt="Interpolation end reference image."/>
       </div>
-    </div>
+      <!--/ Matting. -->
 
-    <h2 class="title is-3">Completion for out-of-distribution objects</h2>
-    <div class="content has-text-justified">
-      <p>
-        Given a scan of an unseen type of shape, ShapeFormer can produce multiple reasonable completions by generalizing the knowledge learned in the training set.
-      </p>
-    </div>
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="./static/images/results_famous.jpg"
-              class="interpolation-image"
-              alt="Interpolation end reference image."/>
+      <h2 class="title is-3">Completion for real scans</h2>
+      <div class="content has-text-justified">
+        <p>
+          We show how our model pre-trained on ShapeNet can be applied to scans of real objects.
+          We test our model on partial point clouds converted from RGBD scans of the Redwood 3D Scans.
+        </p>
       </div>
-    </div>
-    <div class="content has-text-justified">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <table align="center" width="900px">
-      <tbody>
-        <tr>
-        <td>
-          <model-viewer src="./static/famous/teapot/0_s5_mesh.glb" camera-orbit="45deg 55deg 2.5m" alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls="" auto-rotate="" ar="" ar-status="not-presenting">
-          </model-viewer>
-        </td>
-        <td>
-          <model-viewer src="./static/famous/teapot/36_s1_mesh.glb" camera-orbit="45deg 55deg 2.5m" alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls="" auto-rotate="" ar="" ar-status="not-presenting">
-          </model-viewer>
-        </td>
-        <td>
-          <model-viewer src="./static/famous/teapot/0_s3_mesh.glb" camera-orbit="45deg 55deg 2.5m" alt="45deg 0deg 2.5m" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls="" auto-rotate="" ar="" ar-status="not-presenting">
-          </model-viewer>
-        </td>
-        <td>
-          <model-viewer src="./static/famous/teapot/36_s0_mesh.glb" camera-orbit="45deg 55deg 2.5m" alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls="" auto-rotate="" ar="" ar-status="not-presenting">
-          </model-viewer>
-        </td>
-        </tr>
-
-        <tr>
-        <td>
-          <model-viewer src="./static/famous/cup/1_s23_mesh.glb" camera-orbit="110deg 25deg 2.5m" alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls="" auto-rotate="" ar="" ar-status="not-presenting">
-          </model-viewer>
-        </td>
-        <td>
-          <model-viewer src="./static/famous/cup/0_s15_mesh.glb" camera-orbit="110deg 25deg 2.5m" alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls="" auto-rotate="" ar="" ar-status="not-presenting">
-          </model-viewer>
-        </td>
-        <td>
-          <model-viewer src="./static/famous/cup/0_s20_mesh_.glb" camera-orbit="110deg 25deg 2.5m" alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls="" auto-rotate="" ar="" ar-status="not-presenting">
-          </model-viewer>
-        </td>
-        <td>
-          <model-viewer src="./static/famous/cup/1_s7_mesh.glb" camera-orbit="110deg 25deg 2.5m" alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls="" auto-rotate="" ar="" ar-status="not-presenting">
-          </model-viewer>
-        </td>
-      </tr>
-      </tbody></table>
-    </div>
-
-    <h2 class="title is-3">Comparison with previous arts on high ambiguity scans</h2>
-    <div class="content has-text-justified">
-      <p>
-        Compared with previous methods, ShapeFormer can better handle ambiguous scans and produce completions that are more faithful on both observed and unseen regions
-      </p>
-    </div>
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="./static/images/higham_cmps.jpg"
-              class="interpolation-image"
-              alt="Interpolation end reference image."/>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./static/images/results_realscan.jpg" class="interpolation-image"
+            alt="Interpolation end reference image." />
+        </div>
       </div>
-    </div>
 
-
-    <h2 class="title is-3">Comparison with previous arts on low ambiguity scans</h2>
-    <div class="content has-text-justified">
-      <p>
-        We further demonstrate our method can achieve competitive accuracy for low-ambiguity scans.
-        Since there is limited ambiguity for such scans and the goal is to achieve accuracy toward ground truth, 
-        we put the ground truth in the first row and only sample one single completion.
-      </p>
-    </div>
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="./static/images/lowam_cmps.jpg"
-              class="interpolation-image"
-              alt="Interpolation end reference image."/>
+      <h2 class="title is-3">Completion for out-of-distribution objects</h2>
+      <div class="content has-text-justified">
+        <p>
+          Given a scan of an unseen type of shape, ShapeFormer can produce multiple reasonable completions by
+          generalizing the knowledge learned in the training set.
+        </p>
       </div>
-    </div>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./static/images/results_famous.jpg" class="interpolation-image"
+            alt="Interpolation end reference image." />
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <table align="center" width="900px">
+          <tbody>
+            <tr>
+              <td>
+                <model-viewer src="./static/famous/teapot/0_s5_mesh.glb" camera-orbit="45deg 55deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/famous/teapot/36_s1_mesh.glb" camera-orbit="45deg 55deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/famous/teapot/0_s3_mesh.glb" camera-orbit="45deg 55deg 2.5m"
+                  alt="45deg 0deg 2.5m" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/famous/teapot/36_s0_mesh.glb" camera-orbit="45deg 55deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+            </tr>
 
-  
+            <tr>
+              <td>
+                <model-viewer src="./static/famous/cup/1_s23_mesh.glb" camera-orbit="110deg 25deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/famous/cup/0_s15_mesh.glb" camera-orbit="110deg 25deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/famous/cup/0_s20_mesh_.glb" camera-orbit="110deg 25deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+              <td>
+                <model-viewer src="./static/famous/cup/1_s7_mesh.glb" camera-orbit="110deg 25deg 2.5m"
+                  alt="A completed model" style="width: 100%; height: 200;" shadow-intensity="1" camera-controls=""
+                  auto-rotate="" ar="" ar-status="not-presenting">
+                </model-viewer>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <!-- Animation. -->
-    <!-- <div class="columns is-centered">
+      <h2 class="title is-3">Comparison with previous arts on high ambiguity scans</h2>
+      <div class="content has-text-justified">
+        <p>
+          Compared with previous methods, ShapeFormer can better handle ambiguous scans and produce completions that are
+          more faithful on both observed and unseen regions
+        </p>
+      </div>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./static/images/higham_cmps.jpg" class="interpolation-image"
+            alt="Interpolation end reference image." />
+        </div>
+      </div>
+
+
+      <h2 class="title is-3">Comparison with previous arts on low ambiguity scans</h2>
+      <div class="content has-text-justified">
+        <p>
+          We further demonstrate our method can achieve competitive accuracy for low-ambiguity scans.
+          Since there is limited ambiguity for such scans and the goal is to achieve accuracy toward ground truth,
+          we put the ground truth in the first row and only sample one single completion.
+        </p>
+      </div>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./static/images/lowam_cmps.jpg" class="interpolation-image"
+            alt="Interpolation end reference image." />
+        </div>
+      </div>
+
+
+
+      <!-- Animation. -->
+      <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2> -->
 
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
+      <!-- Interpolating. -->
+      <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -484,10 +504,10 @@
           </div>
         </div>
         <br/> -->
-        <!--/ Interpolating. -->
+      <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+      <!-- Re-rendering. -->
+      <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -504,15 +524,15 @@
                     type="video/mp4">
           </video>
         </div> -->
-        <!--/ Re-rendering. -->
+      <!--/ Re-rendering. -->
 
       <!-- </div>
     </div> -->
-    <!--/ Animation. -->
+      <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
+      <!-- Concurrent Work. -->
+      <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -536,16 +556,16 @@
         </div>
       </div>
     </div> -->
-    <!--/ Concurrent Work. -->
+      <!--/ Concurrent Work. -->
 
-  </div>
-</section>
+    </div>
+  </section>
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
       @misc{yan2022shapeformer,
         title={ShapeFormer: Transformer-based Shape Completion via Sparse Representation}, 
         author={Xingguang Yan and Liqiang Lin and Niloy J. Mitra and Dani Lischinski and Danny Cohen-Or and Hui Huang},
@@ -555,37 +575,38 @@
         primaryClass={cs.CV}
   }
 </code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="static/ShapeFormer.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/qheldiv/shapeformer" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            We create this website based on the source code of <a href="https://github.com/nerfies/nerfies.github.io">nerfies.github.io</a>.
-          </p>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="static/ShapeFormer.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/qheldiv/shapeformer" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              We create this website based on the source code of <a
+                href="https://github.com/nerfies/nerfies.github.io">nerfies.github.io</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
